@@ -1,0 +1,152 @@
+actions:
+- action_custom_payload
+- action_custom_payload_three
+- action_custom_payload_two
+- action_reset_slot_values
+- utter_drones_dept_services
+- utter_goodbye
+- utter_greet
+- utter_main_services
+- utter_register_welcome
+- utter_show_license_types
+- utter_test_acknowledgement
+- utter_test_link
+- utter_thanks
+- utter_user_affirm
+- utter_user_deny
+- utter_on_drone_suspecious_activity
+- utter_diff_btwn_drone_model_aircraft
+- utter_about_drone
+- utter_about_model_aircraft
+entities:
+- age
+- email
+- license_type
+- mobile
+
+forms:
+- license_register_form
+intents:
+- register_for_license
+- register_yourself
+- drones_dept
+- user_info
+- greet
+- thanks
+- register_drones_dept
+- affirm
+- deny
+- goodbye
+- license_type_info
+- simple_user_queries
+- registration_info
+- apply_flyer
+- apply_operator
+- person_info
+- drone_suspecious_activity
+- diff_model_drone_aircraft
+- drone
+- model_aircraft
+- drone_flying_safely
+- test:
+    triggers: utter_test_acknowledgement
+slots:
+  age:
+    auto_fill: false
+    type: unfeaturized
+  email:
+    auto_fill: false
+    type: unfeaturized
+  license_type:
+    type: unfeaturized
+  mobile:
+    auto_fill: false
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+templates:
+  utter_acknowledge_for_license:
+  - text: I will get to prepare license process for you.
+  utter_acknowledge_for_thanks:
+  - text: I hope you are satisfied
+  utter_apply_flyer_info:
+  - text: Would you like to provide me your personal details
+  utter_apply_operator_info:
+  - text: Would you like to provide me your personal details
+  utter_ask_age:
+  - text: Can you please provide me your age
+  utter_ask_email:
+  - text: Can you please provide me your email id
+  utter_ask_license_type:
+  - text: Can you please provide me your license_type
+  utter_ask_mobile:
+  - text: Can you please provide me your mobile number
+  utter_drones_dept_services:
+  - buttons:
+    - payload: Register to fly a drone or model aircraft
+      title: Register for drones or model aircrafts
+    - payload: our roles
+      title: Our roles.
+    - payload: recreational unmanned aircraft
+      title: Recreational unmanned aircraft
+    - payload: model aircraft
+      title: Model aircraft
+    - payload: commercial unmanned aircraft and drone operations
+      title: Commercial unmanned aircraft and drone operations
+    - payload: larger unmannned aircraft
+      title: Larger unmannned aircraft
+    - payload: information for public
+      title: Information for public
+    text: 'Followig are the services of drones department which I can avail you with:'
+  utter_goodbye:
+  - text: Good bye
+  utter_greet:
+  - text: Hello! I am your CAA virtual assistant.<br>How may I help you?
+  utter_license_options_to_user:
+  - text: Okay that is great. You can opt for flyer or operator license.
+  utter_main_services:
+  - buttons:
+    - payload: fcl
+      title: FCL (Flight Crew Licensing)
+    - payload: drones_dept
+      title: Drones Deparment
+    text: I can avail you with below services.
+  utter_register_welcome:
+  - text: Welcome to registration process
+  utter_registration_info:
+  - buttons:
+    - payload: Register for flyer Id
+      title: Flyer
+    - payload: Register for Operator Id
+      title: Operator
+    text: There are two types of license
+  utter_show_license_types:
+  - buttons:
+    - payload: flyer id
+      title: Flyer ID
+    - payload: operator id
+      title: Operator ID
+    - title: Both ID's
+    text: 'Here are two license types you need to register for  either one or both:'
+  utter_test_acknowledgement:
+  - text: After clearing test you can come back to me later.
+  utter_test_link:
+  - text: You will need to clear a test for {license_type}. <br> Use link <a class='test_link'
+      href='#' target='_blank'>online test</a>
+  utter_thanks:
+  - text: I am very happy to help you. I hope you are doing well.
+  utter_user_affirm:
+  - text: Okay. So you will need to provide me some details
+  utter_user_deny:
+  - text: Okay. No problem. I will see you later and hope you are doing well.
+  utter_user_interest_for_license_type:
+  - text: You have choosen for {license_type}.
+  utter_on_drone_suspecious_activity:
+  - text: "Local police will take the lead in dealing with drone misuse incidents, particularly at public events, that may contravene aviation safety legislation or other relevant criminal legislation"
+  utter_diff_btwn_drone_model_aircraft:
+  - text: "Both are classified as small unmanned aircrafts.‘small unmanned aircraft’ means any unmanned aircraft, other than a balloon or a kite, having a mass of not more than 20kg without its fuel, but including any articles or equipment installed in or attached to the aircraft at the commencement of its flight classified as drone. When an unmanned aircraft weights more than 20kg, additional regulations become applicable and recreational aircraft in this category are usually classified as ‘large model aircraft’."
+  utter_about_drone:
+  - text: "A small unmanned aircraft means any unmanned aircraft, other than a balloon or a kite, having a mass of not more than 20kg without its fuel, but including any articles or equipment installed in or attached to the aircraft at the commencement of its flight classified as drone."
+  utter_about_model_aircraft:
+  - text: "An unmanned aircraft weights more than 20kg, additional regulations become applicable and recreational aircraft in this category are usually classified as ‘large model aircraft’."
+    
